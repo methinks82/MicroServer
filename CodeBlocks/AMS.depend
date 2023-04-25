@@ -1,0 +1,82 @@
+# depslib dependency file v1.0
+1548889383 source:/home/alex/Desktop/server/example/AppMain.cpp
+	<iostream>
+	"../src/ThreadedServer.hpp"
+	"../src/HttpProtocol.hpp"
+	"../src/WebsocketProtocol.hpp"
+
+1547692344 /home/alex/Desktop/server/src/ThreadedServer.hpp
+	<thread>
+	"Server.hpp"
+
+1547692344 /home/alex/Desktop/server/src/Server.hpp
+	<vector>
+	"Platforms.hpp"
+	"ProtocolBase.hpp"
+
+1547765204 /home/alex/Desktop/server/src/Platforms.hpp
+	<WinSock2.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<netinet/in.h>
+	<unistd.h>
+
+1548882524 /home/alex/Desktop/server/src/ProtocolBase.hpp
+	<exception>
+	<cstring>
+	<vector>
+	<algorithm>
+	<chrono>
+	<time.h>
+	"Log.hpp"
+	"Connection.hpp"
+	<iostream>
+
+1548723654 /home/alex/Desktop/server/src/Log.hpp
+	<string>
+	<sstream>
+	<iostream>
+	<fstream>
+	<chrono>
+	<ctime>
+
+1547692344 /home/alex/Desktop/server/src/Connection.hpp
+	<chrono>
+	"Platforms.hpp"
+
+1548806431 /home/alex/Desktop/server/src/HttpProtocol.hpp
+	<map>
+	"ProtocolBase.hpp"
+	"HelperFunctions.hpp"
+
+1547692344 /home/alex/Desktop/server/src/HelperFunctions.hpp
+	<string>
+	<sstream>
+	<fstream>
+
+1548722210 /home/alex/Desktop/server/src/WebsocketProtocol.hpp
+	<functional>
+	"Log.hpp"
+	"ProtocolBase.hpp"
+	"HelperFunctions.hpp"
+	"SHA-1.hpp"
+	"WebsocketFrame.hpp"
+
+1548885810 /home/alex/Desktop/server/src/SHA-1.hpp
+	<cstring>
+	"Base64.hpp"
+
+1547692344 /home/alex/Desktop/server/src/Base64.hpp
+	<string>
+
+1548720284 /home/alex/Desktop/server/src/WebsocketFrame.hpp
+	<string>
+	<time.h>
+	"Endians.hpp"
+
+1548720218 /home/alex/Desktop/server/src/Endians.hpp
+	<stdint.h>
+
+1548885842 source:/home/alex/Desktop/server/src/ProtocolBase.cpp
+	"ProtocolBase.hpp"
+

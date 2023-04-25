@@ -1,0 +1,125 @@
+<html>
+	<meta charset="UTF-8"></meta>
+	<head>
+		<style>
+			.log{
+				background-color: darkgray;
+				width: 400px;
+				height: 300px;
+				boarder: 2px black solid;
+			}
+			.button{
+				background-color: lightblue;
+				width: 80px;
+				height: 30px;
+				boarder: 2px black solid;
+				float:left;
+			}
+		</style>
+
+		<script>
+			window.onload = function()
+			{
+				setConnectionStatus("disconnected");
+				connect();
+			}
+		
+			var connection;
+			
+			function output(msg)
+			{
+				document.getElementById("chatLog").innerHTML += msg + "<br>";
+			}
+			
+			function setConnectionStatus(isConnected)
+			{
+				if(isConnected)
+				{
+					document.getElementById("state").innerHTML = "Connected to " + window.location.hostname;
+					document.getElementById("state").style.backgroundColor = "green";
+					document.getElementById("connect").style.display = "none";
+					document.getElementById("disconnect").style.display = "block";				
+				}
+				else
+				{
+					document.getElementById("state").innerHTML = "Disconnected";
+					document.getElementById("state").style.backgroundColor = "red";
+					document.getElementById("connect").style.display = "block";
+					document.getElementById("disconnect").style.display = "none";				
+				}
+			}
+
+					
+			function connect()
+			{
+				connection = new WebSocket('ws://' + window.location.hostname + ":" + window.location.port, ['ams']);
+				connection.onopen = function()
+				{
+					output("Connected to server");
+					setConnectionStatus(true);
+					sendMessage("has joined the chat");
+				}
+				
+				connection.onerror = function(error)
+				{
+					setConnectionStatus(false);
+					output("Server Connection Error");
+				}
+				
+				connection.onmessage = function(msg)
+				{
+					output(msg.data);
+				}
+			}
+			
+			function disconnect()
+			{
+				connection.close();
+				output("Disconnected from server");
+				setConnectionStatus(false);
+			}
+		
+			function sendMessage(message)
+			{
+				connection.send(message);
+			}
+			function sendPing()
+			{
+				sendMessage("Ping");
+			}
+			
+			function submitText()
+			{
+				var msg = document.getElementById('msgInput').value;
+				if(msg != '')
+				{
+					sendMessage(msg);
+					document.getElementById('msgInput').value = '';
+				}
+				return false;
+			}
+			
+		</script>
+		
+
+	</head>
+	<body>
+		<h3>Alex's Microserver</h3>
+		<h1>Simple Chat</h1>
+		<div style="width: 400; height: 40">
+			<div id="state" style="width:200; height:30; float: left;">Server Status</div>
+			<div id="connect" class="button" onclick = "connect()" >Connect</div>
+			<div id="disconnect" class="button" onclick = "disconnect()"> Disconnect </div>
+		</div>
+		<div id="chatLog" class = "log"></div>
+		<form onsubmit="submitText(); return false;">
+			<input
+				type = "text"
+				id = "msgInput" />
+				
+			<input
+				type = "submit"
+				value = "Send" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="AMS" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../bin/Server" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../example/" />
+				<Option object_output="../build/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="pthread" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/AMS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../example/AppMain.cpp" />
+		<Unit filename="../src/Base64.hpp" />
+		<Unit filename="../src/Connection.hpp" />
+		<Unit filename="../src/Endians.hpp" />
+		<Unit filename="../src/HelperFunctions.hpp" />
+		<Unit filename="../src/HttpProtocol.hpp" />
+		<Unit filename="../src/Log.hpp" />
+		<Unit filename="../src/Platforms.hpp" />
+		<Unit filename="../src/ProtocolBase.cpp" />
+		<Unit filename="../src/ProtocolBase.hpp" />
+		<Unit filename="../src/SHA-1.hpp" />
+		<Unit filename="../src/Server.hpp" />
+		<Unit filename="../src/ThreadedServer.hpp" />
+		<Unit filename="../src/WebsocketFrame.hpp" />
+		<Unit filename="../src/WebsocketProtocol.hpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,56 @@
+<html>
+<meta charset="UTF-8"></meta>
+<head>
+<style>
+.button{
+	background-color: lightblue;
+	width: 80px;
+	height: 30px;
+	boarder: 2px black solid;
+}
+</style>
+
+<script>
+	var connection;
+	function connect()
+	{
+		document.getElementById("state").innerHTML = "Waiting for connection";
+		connection = new WebSocket('ws://' + window.location.hostname + ':' + window.location.port, ['ams']);
+		connection.onopen = function() 
+		{
+			document.getElementById('state').innerHTML = "Connection open";
+		}
+		connection.onerror = function(error) 
+		{
+			document.getElementById('state').innerHTML = 'Connection Error: ';
+		}
+		connection.onmessage = function(msg) 
+		{
+			document.getElementById('state').innerHTML = 'Message: ' + msg.data;
+		}
+	}
+	
+	function disconnect()
+	{
+		connection.close();
+		document.getElementById('state').innerHTML = 'Disconnected';
+	}
+	
+	function sendPing()
+	{
+		connection.send("ping");
+	}
+	
+</script>
+</head>
+
+<body>
+<h1>AMS Websocket Test</h1>
+<img src="test.jpg"></img><img src="test.png"></img>
+<div id = "state">state</div>
+<div id = "ping" class = "button" onclick="sendPing()">PING</div><p>
+<div id = "connect" class = "button" onclick="connect()"> Connect </div><p>
+<div id = "disconnect" class = "button" onclick="disconnect()"> Disconnect </div>
+
+</body>
+</head>
