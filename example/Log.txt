@@ -2826,3 +2826,137 @@ Upgrade: websocket
 [1682440997@] Closing Connection
 [1682440999@] Websocket: Close message received
 [1682440999@] Closing Connection
+[1682442109@] New Connection: 
+[1682442109@] HttpProtocol::onReceive
+Received message
+-----------------
+GET / HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Sec-GPC: 1
+
+
+[1682442109@] Closing Connection
+[1682442109@] New Connection: 
+[1682442109@] HttpProtocol::onReceive
+Received message
+-----------------
+GET /favicon.ico HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: http://127.0.0.1/
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Sec-GPC: 1
+
+
+[1682442109@] Closing Connection
+[1682442112@] New Connection: 
+[1682442112@] HttpProtocol::onReceive
+Received message
+-----------------
+GET /test.html HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: http://127.0.0.1/
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Sec-GPC: 1
+
+
+[1682442112@] Closing Connection
+[1682442112@] New Connection: 
+[1682442112@] HttpProtocol::onReceive
+Received message
+-----------------
+GET /test.jpg HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: http://127.0.0.1/test.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Sec-GPC: 1
+
+
+[1682442112@] Closing Connection
+[1682442112@] New Connection: 
+[1682442112@] HttpProtocol::onReceive
+Received message
+-----------------
+GET /test.png HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: image/avif,image/webp,*/*
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+DNT: 1
+Connection: keep-alive
+Referer: http://127.0.0.1/test.html
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+Sec-GPC: 1
+
+
+[1682442112@] Closing Connection
+[1682442113@] New Connection: 
+[1682442113@] HttpProtocol::onReceive
+Received message
+-----------------
+GET / HTTP/1.1
+Host: 127.0.0.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0
+Accept: */*
+Accept-Language: en-CA,en-US;q=0.7,en;q=0.3
+Accept-Encoding: gzip, deflate, br
+Sec-WebSocket-Version: 13
+Origin: http://127.0.0.1
+Sec-WebSocket-Protocol: ams
+Sec-WebSocket-Extensions: permessage-deflate
+Sec-WebSocket-Key: 7DNkog1zjk+PuT4iZQMYMA==
+DNT: 1
+Connection: keep-alive, Upgrade
+Sec-Fetch-Dest: websocket
+Sec-Fetch-Mode: websocket
+Sec-Fetch-Site: same-origin
+Sec-GPC: 1
+Pragma: no-cache
+Cache-Control: no-cache
+Upgrade: websocket
+
+
+[1682442113@] Upgrading to websocket
+[1682442114@] Websocket received message: ping
+[1682442115@] Websocket received message: ping
+[1682442117@] Websocket: Close message received
+[1682442117@] Closing Connection

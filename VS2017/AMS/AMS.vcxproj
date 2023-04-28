@@ -145,11 +145,8 @@
     <ClInclude Include="..\..\src\WebsocketProtocol.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\example\AppMain.cpp" />
+    <ClCompile Include="..\..\example\ExampleApp.cpp" />
     <ClCompile Include="..\..\src\ProtocolBase.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\notes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

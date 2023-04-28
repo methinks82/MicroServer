@@ -59,11 +59,8 @@
     <ClCompile Include="..\..\src\ProtocolBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\example\AppMain.cpp">
+    <ClCompile Include="..\..\example\ExampleApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\notes.txt" />
   </ItemGroup>
 </Project>
