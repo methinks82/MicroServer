@@ -42,4 +42,4 @@ The functions that can be added depend on the protocol. For example websockets s
 - onRecieve
 - onDisconnect
 
-> To see an example of a server application take a look at [ExampleApp.cpp](https://github.com/methinks82/MicroServer/blob/main/example/AppMain.cpp) which creates a webserver capable of serving files, connecting and disconnecting, and even hosting a simple chat program.
+> To see an example of a server application take a look at [ExampleApp.cpp](https://github.com/methinks82/MicroServer/blob/main/example/ExampleApp.cpp) which creates a webserver capable of serving files, connecting and disconnecting, and even hosting a simple chat program.
