@@ -1,5 +1,5 @@
 # MicroServer
-> **Microserver is currently not being maintained** as there are several other libraries with similar functionality. Use the 
+> **Microserver is currently not being maintained** as there are several other libraries with similar functionality. This library should be used for educational purposes only
 
 Microserver (Also called Alex's MicroServer or ASM) is a library to provide support for a simple and lightweight server that can includes webserver and websockets, but which can be expanded to handle any kind of protocols. For simplicity it can be used as a single-header file.
 
