@@ -29,6 +29,7 @@
 
 #Generated files
 Log.txt
+example/Log.txt
 
 # directories
 bin/*
